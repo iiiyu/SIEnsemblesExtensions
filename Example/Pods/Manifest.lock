@@ -1,0 +1,14 @@
+PODS:
+  - SIEnsemblesExtensions (0.1.0)
+
+DEPENDENCIES:
+  - SIEnsemblesExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  SIEnsemblesExtensions:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SIEnsemblesExtensions: 14791ad1208f8377bece48285e3257a2bccc736f
+
+COCOAPODS: 0.34.4
