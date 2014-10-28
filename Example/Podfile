@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'SIEnsemblesExtensions', :exclusive => true do
+  pod "SIEnsemblesExtensions", :path => "../"
+
+  
+end
