@@ -17,11 +17,11 @@ Pod::Spec.new do |s|
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SIEnsemblesExtensions"
+  s.homepage         = "https://github.com/iiiyu/SIEnsemblesExtensions"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Xiao ChenYu" => "apple.iiiyu@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SIEnsemblesExtensions.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/iiiyu/SIEnsemblesExtensions.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '6.0'
@@ -29,9 +29,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'SIEnsemblesExtensions' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #   'SIEnsemblesExtensions' => ['Pod/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
