@@ -6,12 +6,13 @@
 //
 
 #import "CDEDropboxCloudFileSystem.h"
-#if TARGET_OS_MAC
-#import <Dropbox-OSX-SDK/DropboxOSX/DBMetadata.h>
-#import <Dropbox-OSX-SDK/DropboxOSX/DBRestClient.h>
-#elif TARGET_OS_IPHONE
+
+#if TARGET_OS_IPHONE
 #import <Dropbox-iOS-SDK/DBMetadata.h>
 #import <Dropbox-iOS-SDK/DBRestClient.h>
+#elif TARGET_OS_MAC
+#import <Dropbox-OSX-SDK/DropboxOSX/DBMetadata.h>
+#import <Dropbox-OSX-SDK/DropboxOSX/DBRestClient.h>
 #endif
 
 static const NSUInteger kCDENumberOfRetriesForFailedAttempt = 5;
