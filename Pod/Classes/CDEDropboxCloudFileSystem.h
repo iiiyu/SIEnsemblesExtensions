@@ -15,21 +15,24 @@
 #import <Dropbox-OSX-SDK/DropboxOSX/DBRestClient.h>
 #endif
 
-@class CDEDropboxCloudFileSystem;
+@class CDEDropboxSyncCloudFileSystem;
 
+extern NSString * const CDEDropboxSyncCloudFileSystemDidDownloadFilesNotification;
+extern NSString * const CDEDropboxSyncCloudFileSystemDidMakeDownloadProgressNotification;
 
-@protocol CDEDropboxCloudFileSystemDelegate <NSObject>
+@protocol CDEDropboxSyncCloudFileSystemDelegate <NSObject>
 
-- (void)linkSessionForDropboxCloudFileSystem:(CDEDropboxCloudFileSystem *)fileSystem completion:(CDECompletionBlock)completion;
+- (void)linkAccountManagerForDropboxSyncCloudFileSystem:(CDEDropboxSyncCloudFileSystem *)fileSystem completion:(CDECompletionBlock)completion;
 
 @end
 
 
-@interface CDEDropboxCloudFileSystem : NSObject <CDECloudFileSystem, DBRestClientDelegate>
+@interface CDEDropboxSyncCloudFileSystem : NSObject <CDECloudFileSystem>
 
-@property (readonly) DBSession *session;
-@property (readwrite, weak) id <CDEDropboxCloudFileSystemDelegate> delegate;
+@property (readonly) DBAccountManager *accountManager;
+@property (readwrite, weak) id <CDEDropboxSyncCloudFileSystemDelegate> delegate;
+@property (atomic, readonly) unsigned long long bytesRemainingToDownload;
 
-- (instancetype)initWithSession:(DBSession *)session;
+- (instancetype)initWithAccountManager:(DBAccountManager *)newManager;
 
 @end
